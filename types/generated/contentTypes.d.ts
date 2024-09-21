@@ -382,13 +382,13 @@ export interface ApiEventEvent extends Schema.CollectionType {
     bgImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     event_type: Attribute.Enumeration<['custom', 'secret-santa']> &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Attribute.DefaultTo<'custom'>;
@@ -401,16 +401,16 @@ export interface ApiEventEvent extends Schema.CollectionType {
     icon: Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     budget: Attribute.Decimal &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
-    users_permissions_users: Attribute.Relation<
+    participants_events: Attribute.Relation<
       'api::event.event',
       'oneToMany',
       'plugin::users-permissions.user'
@@ -419,25 +419,25 @@ export interface ApiEventEvent extends Schema.CollectionType {
       Attribute.CustomField<'plugin::google-maps.location-picker'> &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     reminder: Attribute.Boolean &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     date_purchase_gifts: Attribute.Date &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     date_gift_delivery: Attribute.DateTime &
       Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     createdAt: Attribute.DateTime;
